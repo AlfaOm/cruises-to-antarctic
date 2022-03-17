@@ -12,8 +12,135 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page__body">
-  Круизы в Антарктику
+<body>
+  <header class="page-header">
+    <!-- <a class="page-header__logo">
+      <picture>
+        <source media="(max-width: 1159px)" srcset="img/svg/logo-tab.svg">
+        <img src="img/svg/logo-desk.svg" width="70" height="38" alt="Логотип">
+      </picture>
+    </a> -->
+
+    <!-- <button class="page-header__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button> -->
+
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <a class="main-nav__logo">
+        <picture>
+          <source media="(max-width: 1159px)" srcset="img/svg/logo-tab.svg">
+          <img src="img/svg/logo-desk.svg" width="70" height="38" alt="Логотип">
+        </picture>
+        <!-- <svg width="42" height="22">
+          <use xlink:href="img/svg/sprite.svg#logo"></use>
+        </svg> -->
+      </a>
+      <div class="main-nav__block">
+        <a class="main-nav__logo-popup">
+          <img src="img/svg/logo-popup.svg" width="42" height="22" alt="Логотип">
+        </a>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#advantages">Преимущества</a></li>
+            <li class="main-nav__item"><a href="#travel">Направления</a></li>
+            <li class="main-nav__item"><a href="#cruises">Ближайшие круизы</a></li>
+            <li class="main-nav__item"><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="banner">
+      <h1>Круизы в Антарктику</h1>
+      <p>Волшебный мир айсбергов и пингвинов</p>
+    </section>
+
+    <section class="travel" id="travel">
+      <div class="travel__text">
+        <h1>Путешествие на край Земли</h1>
+        <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш
+          круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов
+          пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+      </div>
+      <div class="travel__image">
+        <picture>
+          <!-- 1x: 290px; 2x: 580px -->
+          <source media="(max-width: 767px)" srcset="img/penguins-mob.jpg 1x, img/penguins-mob@2x.jpg 2x">
+          <!-- 1x: 324px; 2x: 648px -->
+          <source media="(max-width: 1023px)" srcset="img/penguins-tab.jpg 1x, img/penguins-tab@2x.jpg 2x">
+          <!-- 1x: 560px; 2x: 1120px -->
+          <img src="img/penguins-desk.jpg" srcset="img/penguins-desk@2x.jpg 2x" width="560" height="301"
+            alt="Три пингвина смотрят на тебя">
+        </picture>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <nav class="page-footer__nav">
+      <a class="page-footer__nav-logo">
+        <picture>
+          <source media="(max-width: 1023px)" srcset="img/svg/logo-tab.svg">
+          <img src="img/svg/logo-desk.svg" width="70" height="38" alt="Логотип">
+        </picture>
+      </a>
+      <div class="page-footer__nav-wrapper">
+        <ul class="page-footer__nav-list">
+          <li class="page-footer__nav-item"><a href="#advantages">Преимущества</a></li>
+          <li class="page-footer__nav-item"><a href="#course">Направления</a></li>
+          <li class="page-footer__nav-item"><a href="#cruises">Ближайшие круизы</a></li>
+          <li class="page-footer__nav-item"><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-footer__social-wrapper">
+      <ul class="social__list">
+        <li class="social__item social__item--facebook">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+            <picture>
+              <source media="(max-width: 1159px)" srcset="img/svg/fb.svg">
+              <img src="img/svg/fb.svg" width="11" height="20" alt="Логотип Фэйсбук">
+            </picture>
+            <!-- <svg width="11" height="20">
+            <use xlink:href="img/svg/sprite.svg#fb"></use>
+          </svg> -->
+          </a>
+        </li>
+        <li class="social__item social__item--instagram">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+            <span class="visually-hidden">Мы в Инстаграме</span>
+            <picture>
+              <source media="(max-width: 1159px)" srcset="img/svg/instagram.svg">
+              <img src="img/svg/instagram-desk.svg" width="20" height="20" alt="Логотип Инстаграм">
+            </picture>
+            <!-- <svg width="16" height="16">
+            <use xlink:href="img/svg/sprite.svg#instagram"></use>
+          </svg> -->
+          </a>
+        </li>
+        <li class="social__item social__item--vkontakte">
+          <a class="social__link social__link--vkontakte" href="https://twitter.com/htmlacademy">
+            <span class="visually-hidden">Мы в Твитере</span>
+            <picture>
+              <source media="(max-width: 1159px)" srcset="img/svg/twitter.svg">
+              <img src="img/svg/twitter-desk.svg" width="20" height="16" alt="Логотип Твиттер">
+            </picture>
+            <!-- <svg width="23" height="16">
+            <use xlink:href="img/svg/sprite.svg#tw"></use>
+          </svg> -->
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
   <script src="js/script.min.js"></script>
 </body>
 

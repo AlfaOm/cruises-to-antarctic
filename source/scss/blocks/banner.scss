@@ -1,0 +1,86 @@
+.banner {
+  position: relative;
+  padding-top: 283px;
+  padding-right: 103px;
+  padding-left: 103px;
+  padding-bottom: 283px;
+  top: -64px;
+  margin-bottom: -63px;
+  background: $bg-banner url("../img/background/bg-banner-desk.jpg") no-repeat center top;
+  background-size: cover;
+  z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/bg-banner-desk@2x.jpg");
+    background-size: cover;
+  }
+
+  @media (max-width: $to-desktop-width) {
+    padding: 280px 45px;
+    background: url("../img/background/bg-banner-tab.jpg") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/bg-banner-tab@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: $to-tablet-width) {
+    padding: 185px 15px;
+    background: url("../img/background/bg-banner-mob.jpg") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/bg-banner-mob@2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+.banner h1 {
+  margin-bottom: 30px;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 65px;
+  color: $white-text;
+
+  @media (max-width: $to-desktop-width) {
+    margin-bottom: 29px;
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    margin-bottom: 25px;
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.banner p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  color: $white-text;
+
+  @media (max-width: $to-desktop-width) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    width: 199px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.banner h1,
+.banner p {
+  padding-left: 95px;
+
+  @media (max-width: $to-desktop-width) {
+    padding-left: 0;
+  }
+}
