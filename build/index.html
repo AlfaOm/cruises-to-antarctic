@@ -26,15 +26,17 @@
     </button> -->
 
     <nav class="main-nav main-nav--closed main-nav--nojs">
-      <a class="main-nav__logo">
-        <!-- <picture>
+      <div class="main-nav__logo">
+        <a>
+          <!-- <picture>
           <source media="(max-width: 1159px)" srcset="img/svg/logo-tab.svg">
           <img src="img/svg/logo-desk.svg" width="70" height="38" alt="Логотип">
         </picture> -->
-        <svg width="42" height="22">
-          <use xlink:href="img/svg/sprite.svg#logo"></use>
-        </svg>
-      </a>
+          <svg width="70" height="38">
+            <use xlink:href="img/svg/sprite.svg#logo"></use>
+          </svg>
+        </a>
+      </div>
       <div class="main-nav__block">
         <a class="main-nav__logo-popup">
           <img src="img/svg/logo-popup.svg" width="42" height="22" alt="Логотип">
@@ -70,9 +72,9 @@
       <div class="travel__image">
 
         <!-- 1x: 290px; 2x: 580px -->
-        <source media="(max-width: 767px)" srcset="img/penguins-mob.jpg 1x, img/penguins-mob@2x.jpg 2x">
+        <!-- <source media="(max-width: 767px)" srcset="img/penguins-mob.jpg 1x, img/penguins-mob@2x.jpg 2x"> -->
         <!-- 1x: 324px; 2x: 648px -->
-        <source media="(max-width: 1023px)" srcset="img/penguins-tab.jpg 1x, img/penguins-tab@2x.jpg 2x">
+        <!-- <source media="(max-width: 1023px)" srcset="img/penguins-tab.jpg 1x, img/penguins-tab@2x.jpg 2x"> -->
         <!-- 1x: 560px; 2x: 1120px -->
         <img src="img/penguins-desk.jpg" srcset="img/penguins-desk@2x.jpg 2x" width="560" height="301"
           alt="Три пингвина смотрят на тебя">
@@ -124,9 +126,9 @@
           <h3>Круиз “Астория”</h3>
           <div class="cruises__image">
             <!-- 1x: 270px; 2x: 540px -->
-            <source media="(max-width: 767px)" srcset="img/astoria-mob.jpg 1x, img/astoria-mob@2x.jpg 2x">
+            <!-- <source media="(max-width: 767px)" srcset="img/astoria-mob.jpg 1x, img/astoria-mob@2x.jpg 2x"> -->
             <!-- 1x: 309px; 2x: 618px; -->
-            <source media="(max-width: 1023px)" srcset="img/astoria-tab.jpg 1x, img/astoria-tab@2x.jpg 2x">
+            <!-- <source media="(max-width: 1023px)" srcset="img/astoria-tab.jpg 1x, img/astoria-tab@2x.jpg 2x"> -->
             <!-- 1x: 260px; 2x: 520px; -->
             <img src="img/astoria-desk.jpg" srcset="img/astoria-desk@2x.jpg 2x" width="260" height="386"
               alt="Вид на ледяную гладь со слегка заснеженной горой на заднем фоне. На небе ни облачка">
@@ -331,15 +333,55 @@
 
       </ul>
     </section>
+
+    <section class="reserv">
+      <div class="reserv__text">
+        <h2>Раннее бронирование</h2>
+        <p>Забронируйте тур за 3-6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+      </div>
+
+      <div class="reserv__form">
+        <form id="form-feedback" action="https://echo.htmlacademy.ru" method="get" autocomplete="off">
+          <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
+          <div class="reserv__input-wrapper">
+            <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
+            <input type="text" name="name" id="feedback-name" placeholder="Имя">
+          </div>
+          <div id="input-tel" class="reserv__input-wrapper">
+            <label class="visually-hidden" for="feedback-tel">Введите номера телефона</label>
+            <input type="tel" name="tel" id="feedback-tel" minlength="10" placeholder="Телефон">
+          </div>
+          <div class="reserv__input-wrapper">
+            <label class="visually-hidden" for="feedback-email">Укажите электронную почту</label>
+            <input type="email" name="email" id="feedback-email" autocomplete="email" autocapitalize="off"
+              placeholder="Email">
+          </div>
+          <div class="reserv__input-checkbox">
+            <input class="visually-hidden" type="checkbox" name="checkbox" id="feedback-checkbox" checked>
+            <label for="feedback-checkbox">Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных данных</label>
+          </div>
+          <button class="button" type="submit">Оставить заявку</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+
+    </section>
+
   </main>
 
   <footer class="page-footer">
     <nav class="page-footer__nav">
       <a class="page-footer__nav-logo">
-        <picture>
+        <!-- <picture>
           <source media="(max-width: 1023px)" srcset="img/svg/logo-tab.svg">
           <img src="img/svg/logo-desk.svg" width="70" height="38" alt="Логотип">
-        </picture>
+        </picture> -->
+        <svg width="70" height="38">
+          <use xlink:href="img/svg/sprite.svg#logo"></use>
+        </svg>
       </a>
       <div class="page-footer__nav-wrapper">
         <ul class="page-footer__nav-list">
@@ -368,25 +410,25 @@
         <li>
           <a href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Мы в Инстаграме</span>
-            <picture>
+            <!-- <picture>
               <source media="(max-width: 1159px)" srcset="img/svg/instagram.svg">
               <img src="img/svg/instagram-desk.svg" width="20" height="20" alt="Логотип Инстаграм">
-            </picture>
-            <!-- <svg width="16" height="16">
-            <use xlink:href="img/svg/sprite.svg#instagram"></use>
-          </svg> -->
+            </picture> -->
+            <svg width="20" height="20">
+              <use xlink:href="img/svg/sprite.svg#instagram"></use>
+            </svg>
           </a>
         </li>
         <li>
           <a href="https://twitter.com/htmlacademy">
             <span class="visually-hidden">Мы в Твитере</span>
-            <picture>
+            <!-- <picture>
               <source media="(max-width: 1159px)" srcset="img/svg/twitter.svg">
               <img src="img/svg/twitter-desk.svg" width="20" height="16" alt="Логотип Твиттер">
-            </picture>
-            <!-- <svg width="23" height="16">
-            <use xlink:href="img/svg/sprite.svg#tw"></use>
-          </svg> -->
+            </picture> -->
+            <svg width="20" height="16">
+              <use xlink:href="img/svg/sprite.svg#tw"></use>
+            </svg>
           </a>
         </li>
       </ul>
