@@ -1,0 +1,137 @@
+.cruises {
+  padding: 120px 103px;
+  text-align: center;
+
+  @media (max-width: $to-desktop-width) {
+    padding: 100px 45px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    padding: 65px 15px;
+  }
+}
+
+.cruises h2 {
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 42px;
+  color: $dark-text;
+
+  @media (max-width: $to-desktop-width) {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.cruises ul {
+  margin: 0;
+  padding: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+
+  @media (max-width: $to-tablet-width) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.cruises li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  &:hover .cruises__card {
+    display: block;
+  }
+
+  &:hover h3 {
+    top: 35px;
+    bottom: auto;
+    left: 25px;
+    z-index: 3;
+  }
+}
+
+.cruises__image img {
+  width: 260px;
+  height: 386px;
+  object-fit: cover;
+
+  @media (max-width: $to-desktop-width) {
+    width: 309px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    width: 270px;
+  }
+}
+
+.cruises h3 {
+  margin: 0;
+  position: absolute;
+  left: 29px;
+  bottom: 27px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: $white-text;
+}
+
+.cruises__card {
+  position: absolute;
+  padding-top: 71px;
+  padding-right: 25px;
+  padding-bottom: 35px;
+  padding-left: 25px;
+  top: 0;
+  width: 260px;
+  min-height: 386px;
+  background-color: $dark-text;
+  text-align: left;
+
+  display: none;
+
+  @media (max-width: $to-desktop-width) {
+    width: 309px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    width: 270px;
+  }
+}
+
+.cruises__card dt {
+  color: $white-text;
+}
+
+.cruises__card dl {
+  margin-bottom: 26px;
+}
+
+.cruises__card dt {
+  font-weight: 500;
+}
+
+.cruises__card dd {
+  margin: 0;
+  margin-bottom: 14px;
+  color: $light-gray-text;
+}
+
+.cruises__button {
+  display: block;
+  width: 210px;
+}
