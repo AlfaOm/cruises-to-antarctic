@@ -1,5 +1,5 @@
 .cruises {
-  padding: 120px 103px;
+  padding: 110px 103px 115px;
   text-align: center;
 
   @media (max-width: $to-desktop-width) {
@@ -13,7 +13,7 @@
 
 .cruises h2 {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 49px;
   font-size: 28px;
   font-weight: 600;
   line-height: 42px;
@@ -39,7 +39,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 26px;
   list-style: none;
 
   @media (max-width: $to-tablet-width) {
@@ -58,7 +59,7 @@
   }
 
   &:hover h3 {
-    top: 35px;
+    top: 27px;
     bottom: auto;
     left: 25px;
     z-index: 3;
@@ -132,6 +133,7 @@
 }
 
 .cruises__button {
+  padding-bottom: 10px;
   display: block;
   width: 210px;
 }

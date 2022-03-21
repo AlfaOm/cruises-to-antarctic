@@ -1,11 +1,11 @@
 .banner {
   position: relative;
-  padding-top: 283px;
+  padding-top: 270px;
   padding-right: 103px;
   padding-left: 103px;
-  padding-bottom: 283px;
-  top: -64px;
-  margin-bottom: -63px;
+  padding-bottom: 277px;
+  top: -73px;
+  margin-bottom: -73px;
   background: $bg-banner url("../img/background/bg-banner-desk.jpg") no-repeat
     center top;
   background-size: cover;
@@ -40,7 +40,8 @@
 }
 
 .banner h1 {
-  margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 13px;
   font-size: 54px;
   font-weight: 700;
   line-height: 65px;

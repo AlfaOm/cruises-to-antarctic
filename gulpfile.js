@@ -7,7 +7,7 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 // const htmlmin = require("gulp-htmlmin");
-const terser = require("gulp-terser");
+// const terser = require("gulp-terser");
 const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
@@ -45,10 +45,10 @@ const html = () => {
 const scripts = () => {
   return gulp
     .src("source/js/*.js")
-    .pipe(terser())
-    .pipe(rename(function (path) {
-      path.basename += ".min";
-    }))
+    // .pipe(terser())
+    // .pipe(rename(function (path) {
+    //   path.basename += ".min";
+    // }))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 };
@@ -102,7 +102,7 @@ const copy = (done) => {
     .src(
       [
         "source/fonts/*.{woff2,woff}",
-        "source/*.ico",
+        // "source/*.ico",
         "source/img/**/*.svg",
         "!source/img/icons/*.svg",
         // "source/manifest.webmanifest",
