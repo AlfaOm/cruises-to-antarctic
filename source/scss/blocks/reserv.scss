@@ -49,10 +49,10 @@
 
 .reserv__text h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   font-size: 40px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 46px;
   color: $dark-text;
 
   @media (max-width: $to-desktop-width) {
@@ -102,7 +102,7 @@
 }
 
 .reserv__form form {
-  padding: 50px;
+  padding: 43px 50px;
   width: 403px;
   min-height: 455px;
   background-color: $dark-text;
@@ -121,7 +121,7 @@
 }
 
 .reserv__form p {
-  margin-bottom: 35px;
+  margin-bottom: 26px;
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
@@ -147,7 +147,7 @@
 }
 
 .reserv__input-wrapper input {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding: 11px 16px;
   width: 100%;
   font-size: 14px;
@@ -179,7 +179,7 @@
 .reserv__input-checkbox input + label::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   width: 18px;
   height: 18px;
@@ -195,7 +195,7 @@
 .reserv__input-checkbox input:checked + label::after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: 3px;
   width: 15px;
   height: 15px;
