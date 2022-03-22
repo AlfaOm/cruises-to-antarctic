@@ -17,7 +17,9 @@
   }
 
   @media (max-width: $to-desktop-width) {
-    padding: 280px 45px;
+    padding: 268px 45px 276px;
+    top: -50px;
+    margin-bottom: -50px;
     background: url("../img/background/bg-banner-tab.jpg") no-repeat center top;
     background-size: cover;
 
@@ -28,7 +30,9 @@
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 185px 15px;
+    padding: 174px 15px 179px;
+    top: -62px;
+    margin-bottom: -61px;
     background: url("../img/background/bg-banner-mob.jpg") no-repeat center top;
     background-size: cover;
 
@@ -48,13 +52,13 @@
   color: $white-text;
 
   @media (max-width: $to-desktop-width) {
-    margin-bottom: 29px;
+    margin-bottom: 12px;
     font-size: 50px;
     line-height: 61px;
   }
 
   @media (max-width: $to-tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     font-size: 36px;
     line-height: 45px;
   }

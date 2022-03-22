@@ -13,7 +13,7 @@
   }
 
   @media (max-width: $to-desktop-width) {
-    padding: 100px 45px;
+    padding: 88px 45px 100px;
     grid-template-columns: 1fr;
     background: $bg-reserv url("../img/background/bg-feedback-tab.jpg")
       no-repeat center top;
@@ -26,7 +26,7 @@
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 65px 15px;
+    padding: 59px 15px 65px;
     background: $bg-reserv url("../img/background/bg-feedback-mob.jpg")
       no-repeat center top;
     background-size: cover;
@@ -56,14 +56,14 @@
   color: $dark-text;
 
   @media (max-width: $to-desktop-width) {
-    margin-bottom: 25px;
+    margin: 0 auto;
+    margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
-    margin: 0 auto;
   }
 
   @media (max-width: $to-tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 13px;
     width: 194px;
     font-size: 24px;
     line-height: 31px;
@@ -80,11 +80,11 @@
 
   @media (max-width: $to-desktop-width) {
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 52px;
   }
 
   @media (max-width: $to-tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     width: 257px;
     font-size: 16px;
     line-height: 22px;
@@ -108,7 +108,7 @@
   background-color: $dark-text;
 
   @media (max-width: $to-tablet-width) {
-    padding: 40px 30px;
+    padding: 34px 30px 40px;
     width: 290px;
   }
 }
@@ -170,9 +170,9 @@
   padding-left: 23px;
 
   @media (max-width: $to-tablet-width) {
-    padding-left: 26px;
+    padding-left: 28px;
     display: block;
-    width: 173px;
+    width: 176px;
   }
 }
 
