@@ -3,7 +3,8 @@
   padding-right: 103px;
   padding-bottom: 120px;
   padding-left: 103px;
-  background: $bg-advantages url("../img/background/bg-advantages-desk.jpg") no-repeat center top;
+  background: $bg-advantages url("../img/background/bg-advantages-desk.jpg")
+    no-repeat center top;
   background-size: cover;
   text-align: center;
 
@@ -13,8 +14,9 @@
   }
 
   @media (max-width: $to-desktop-width) {
-    padding: 100px 45px;
-    background: $bg-advantages url("../img/background/bg-advantages-tab.jpg") no-repeat center top;
+    padding: 90px 45px 100px;
+    background: $bg-advantages url("../img/background/bg-advantages-tab.jpg")
+      no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
@@ -24,8 +26,9 @@
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 65px 15px;
-    background: $bg-advantages url("../img/background/bg-advantages-mob.jpg") no-repeat center top;
+    padding: 57px 15px 67px;
+    background: $bg-advantages url("../img/background/bg-advantages-mob.jpg")
+      no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
@@ -49,7 +52,7 @@
   }
 
   @media (max-width: $to-tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -78,7 +81,7 @@
   @media (max-width: $to-desktop-width) {
     padding-top: 25px;
     padding-right: 16px;
-    padding-bottom: 25px;
+    padding-bottom: 19px;
     padding-left: 20px;
     width: 206px;
   }
@@ -105,7 +108,7 @@
     margin-bottom: 20px;
 
     @media (max-width: $to-desktop-width) {
-      margin-bottom: 28px;
+      margin-bottom: 17px;
       width: 33px;
       height: 19px;
     }
@@ -116,7 +119,7 @@
     margin-bottom: 23px;
 
     @media (max-width: $to-desktop-width) {
-      margin-bottom: 31px;
+      margin-bottom: 20px;
       width: 38px;
       height: 13px;
     }
@@ -147,6 +150,19 @@
 }
 
 .advantages__item {
+  &--second p:nth-child(2n + 1) {
+    padding-right: 20px;
+
+    @media (max-width: $to-desktop-width) {
+      padding-right: 0;
+    }
+  }
+
+  &--second p {
+    @media (max-width: $to-tablet-width) {
+      padding-right: 10px;
+    }
+  }
   &--third p {
     padding-right: 50px;
 
