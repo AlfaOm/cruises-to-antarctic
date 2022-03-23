@@ -3,6 +3,7 @@
 const navMain = document.querySelector(".main-nav");
 const navToggle = document.querySelector(".main-nav__toggle");
 const showNav = document.querySelector(".main-nav__wrapper");
+const shadowNav = document.querySelector(".main-nav__shadow-back");
 const menuItem = document.querySelectorAll(".main-nav__wrapper a");
 
 navMain.classList.remove("main-nav--nojs");
@@ -13,14 +14,33 @@ function handlerToggleMenu(item) {
       navMain.classList.remove("main-nav--closed");
       showNav.classList.add("main-nav__wrapper--show");
       navMain.classList.add("main-nav--opened");
+      shadowNav.classList.add("main-nav__shadow-back-on");
+      document.body.classList.add("disable-scroll");
     } else {
       navMain.classList.add("main-nav--closed");
       showNav.classList.remove("main-nav__wrapper--show");
       navMain.classList.remove("main-nav--opened");
+      shadowNav.classList.remove("main-nav__shadow-back-on");
+      document.body.classList.remove("disable-scroll");
     }
   });
 }
 handlerToggleMenu(navToggle);
+
+// Закрытие мобильного меню при изменении ширины экрана
+function closedMenu() {
+  var widthViewport = window.innerWidth;
+  if (widthViewport > 767) {
+    navMain.classList.add("main-nav--closed");
+    showNav.classList.remove("main-nav__wrapper--show");
+    navMain.classList.remove("main-nav--opened");
+    shadowNav.classList.remove("main-nav__shadow-back-on");
+    document.body.classList.remove("disable-scroll");
+  }
+}
+window.addEventListener("resize", function () {
+  closedMenu();
+});
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -28,7 +48,21 @@ window.addEventListener("keydown", function (evt) {
     if (showNav.classList.contains("main-nav__wrapper--show")) {
       navMain.classList.add("main-nav--closed");
       showNav.classList.remove("main-nav__wrapper--show");
+      navMain.classList.remove("main-nav--opened");
+      shadowNav.classList.remove("main-nav__shadow-back-on");
+      document.body.classList.remove("disable-scroll");
     }
+  }
+});
+
+// Закрытие меню по клику вне меню
+shadowNav.addEventListener("click", function () {
+  if (showNav.classList.contains("main-nav__wrapper--show")) {
+    navMain.classList.add("main-nav--closed");
+    showNav.classList.remove("main-nav__wrapper--show");
+    navMain.classList.remove("main-nav--opened");
+    shadowNav.classList.remove("main-nav__shadow-back-on");
+    document.body.classList.remove("disable-scroll");
   }
 });
 
@@ -37,6 +71,8 @@ menuItem.forEach((item) => {
   item.addEventListener("click", function () {
     navMain.classList.add("main-nav--closed");
     navMain.classList.remove("main-nav--opened");
+    shadowNav.classList.remove("main-nav__shadow-back-on");
+    document.body.classList.remove("disable-scroll");
   });
 });
 

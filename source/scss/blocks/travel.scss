@@ -3,8 +3,7 @@
   padding-right: 103px;
   padding-bottom: 115px;
   padding-left: 103px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
 
   @media (max-width: $to-desktop-width) {
     padding: 100px 45px 94px;
@@ -12,6 +11,16 @@
 
   @media (max-width: $to-tablet-width) {
     padding: 65px 15px 60px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.travel__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: $to-tablet-width) {
     display: flex;
     flex-direction: column;
   }

@@ -1,8 +1,5 @@
 .reserv {
   padding: 50px 103px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
   background: $bg-reserv url("../img/background/bg-feedback-desk.jpg") no-repeat
     center top;
   background-size: cover;
@@ -14,7 +11,6 @@
 
   @media (max-width: $to-desktop-width) {
     padding: 88px 45px 100px;
-    grid-template-columns: 1fr;
     background: $bg-reserv url("../img/background/bg-feedback-tab.jpg")
       no-repeat center top;
     background-size: cover;
@@ -35,6 +31,16 @@
       background-image: url("../img/background/bg-feedback-mob@2x.jpg");
       background-size: cover;
     }
+  }
+}
+
+.reserv__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  @media (max-width: $to-desktop-width) {
+    grid-template-columns: 1fr;
   }
 }
 

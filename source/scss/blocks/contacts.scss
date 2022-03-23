@@ -1,10 +1,5 @@
 .contacts {
   padding: 117px 103px 118px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 30px;
 
   @media (max-width: $to-desktop-width) {
     padding: 100px 45px 96px;
@@ -12,6 +7,17 @@
 
   @media (max-width: $to-tablet-width) {
     padding: 57px 15px 60px;
+  }
+}
+
+.contacts__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+
+  @media (max-width: $to-tablet-width) {
     flex-direction: column-reverse;
   }
 }

@@ -1,7 +1,5 @@
 .page-footer {
   padding: 50px 103px;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
   background-color: $dark-text;
 
   @media (max-width: $to-desktop-width) {
@@ -9,9 +7,17 @@
   }
 
   @media (max-width: $to-tablet-width) {
+    padding: 42px 15px;
+  }
+}
+
+.page-footer__wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  @media (max-width: $to-tablet-width) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    padding: 42px 15px;
   }
 }
 

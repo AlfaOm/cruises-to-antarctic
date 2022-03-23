@@ -64,7 +64,7 @@
     top: -42px;
     right: 60px;
     background-color: $white-text;
-    width: 320px;
+    min-width: 320px;
     min-height: 568px;
   }
 }
@@ -135,8 +135,24 @@
   display: block;
   position: absolute;
   top: 0;
-  right: 213px;
+  left: 40px;
   z-index: 5;
+}
+
+.main-nav__shadow-back {
+  background: $bg-back-menu;
+  z-index: 2;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.main-nav__shadow-back-on {
+  display: block;
 }
 
 .main-nav__wrapper {
@@ -149,19 +165,11 @@
       padding-top: 83px;
       padding-right: 30px;
       padding-left: 25px;
-      width: 285px;
+      min-width: 100%;
       min-height: 568px;
       background-color: $white-text;
       z-index: 3;
-    }
-
-    &--show .main-nav__wrapper-back {
-      position: absolute;
-      top: 0;
-      right: 285px;
-      width: 100vw;
-      min-height: 568px;
-      background: $bg-back-menu;
+      overflow-y: auto;
     }
   }
 }
