@@ -6,7 +6,7 @@
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 57px 15px 60px;
+    padding: 63px 15px 60px;
   }
 }
 
@@ -75,6 +75,7 @@
 }
 
 .contacts__address {
+  display: block;
   margin-left: auto;
   width: 500px;
 

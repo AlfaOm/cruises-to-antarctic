@@ -8,6 +8,22 @@ const menuItem = document.querySelectorAll(".main-nav__wrapper a");
 
 navMain.classList.remove("main-nav--nojs");
 
+// Запрет скролла контента при открытом меню
+const disableScroll = function () {
+	let pagePosition = window.scrollY;
+	document.body.classList.add('disable-scroll');
+	document.body.dataset.position = pagePosition;
+	document.body.style.top = -pagePosition + 'px';
+}
+
+const enableScroll = function () {
+	let pagePosition = parseInt(document.body.dataset.position, 10);
+	document.body.style.top = 'auto';
+	document.body.classList.remove('disable-scroll');
+	window.scroll({ top: pagePosition, left: 0 });
+	document.body.removeAttribute('data-position');
+}
+
 function handlerToggleMenu(item) {
   item.addEventListener("click", function () {
     if (navMain.classList.contains("main-nav--closed")) {
@@ -15,13 +31,14 @@ function handlerToggleMenu(item) {
       showNav.classList.add("main-nav__wrapper--show");
       navMain.classList.add("main-nav--opened");
       shadowNav.classList.add("main-nav__shadow-back-on");
-      document.body.classList.add("disable-scroll");
+      disableScroll();
     } else {
       navMain.classList.add("main-nav--closed");
       showNav.classList.remove("main-nav__wrapper--show");
       navMain.classList.remove("main-nav--opened");
       shadowNav.classList.remove("main-nav__shadow-back-on");
       document.body.classList.remove("disable-scroll");
+      enableScroll();
     }
   });
 }
@@ -35,7 +52,7 @@ function closedMenu() {
     showNav.classList.remove("main-nav__wrapper--show");
     navMain.classList.remove("main-nav--opened");
     shadowNav.classList.remove("main-nav__shadow-back-on");
-    document.body.classList.remove("disable-scroll");
+    enableScroll();
   }
 }
 window.addEventListener("resize", function () {
@@ -50,7 +67,7 @@ window.addEventListener("keydown", function (evt) {
       showNav.classList.remove("main-nav__wrapper--show");
       navMain.classList.remove("main-nav--opened");
       shadowNav.classList.remove("main-nav__shadow-back-on");
-      document.body.classList.remove("disable-scroll");
+      enableScroll();
     }
   }
 });
@@ -62,7 +79,7 @@ shadowNav.addEventListener("click", function () {
     showNav.classList.remove("main-nav__wrapper--show");
     navMain.classList.remove("main-nav--opened");
     shadowNav.classList.remove("main-nav__shadow-back-on");
-    document.body.classList.remove("disable-scroll");
+    enableScroll();
   }
 });
 
@@ -72,7 +89,7 @@ menuItem.forEach((item) => {
     navMain.classList.add("main-nav--closed");
     navMain.classList.remove("main-nav--opened");
     shadowNav.classList.remove("main-nav__shadow-back-on");
-    document.body.classList.remove("disable-scroll");
+    enableScroll();
   });
 });
 

@@ -62,15 +62,18 @@
     display: block;
     padding: 60px 30px;
     top: -42px;
-    right: 60px;
+    left: -14px;
     background-color: $white-text;
-    min-width: 320px;
+    min-width: 100vw;
     min-height: 568px;
   }
 }
 
-.main-nav--nojs .main-nav__toggle {
-  display: none;
+.main-nav--nojs .main-nav__toggle,
+.main-nav--nojs .main-nav__logo {
+  @media (max-width: $to-tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -178,6 +181,7 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 33px;
+  row-gap: 15px;
   margin: 0;
   list-style: none;
 

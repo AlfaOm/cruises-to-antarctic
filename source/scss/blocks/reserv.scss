@@ -70,7 +70,7 @@
 
   @media (max-width: $to-tablet-width) {
     margin-bottom: 13px;
-    width: 194px;
+    min-width: 194px;
     font-size: 24px;
     line-height: 31px;
   }
@@ -91,7 +91,7 @@
 
   @media (max-width: $to-tablet-width) {
     margin-bottom: 35px;
-    width: 257px;
+    width: 262px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -108,14 +108,14 @@
 }
 
 .reserv__form form {
-  padding: 43px 50px;
+  padding: 44px 50px;
   width: 403px;
   min-height: 455px;
   background-color: $dark-text;
 
   @media (max-width: $to-tablet-width) {
     padding: 34px 30px 40px;
-    width: 290px;
+    width: 100%;
   }
 }
 
@@ -127,12 +127,13 @@
 }
 
 .reserv__form p {
-  margin-bottom: 26px;
+  margin-bottom: 25px;
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
 
   @media (max-width: $to-tablet-width) {
+    margin-bottom: 27px;
     line-height: 25px;
     text-align: center;
   }
@@ -147,18 +148,20 @@
     line-height: 12px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-shadow: 0 0 5px $color-hover;
   }
 }
 
 .reserv__input-wrapper input {
   margin-bottom: 16px;
-  padding: 11px 16px;
+  padding: 11px 15px;
   width: 100%;
   font-size: 14px;
   line-height: 21px;
   color: $dark-text;
+  -webkit-appearance: none;
 
   &::placeholder {
     font-size: 14px;
@@ -170,6 +173,10 @@
 .reserv__input-checkbox {
   margin-bottom: 30px;
   position: relative;
+
+  @media (max-width: $to-tablet-width) {
+    margin-bottom: 29px;
+  }
 }
 
 .reserv__input-checkbox label {
@@ -198,6 +205,14 @@
   }
 }
 
+.reserv__input-checkbox input:hover + label::before,
+.reserv__input-checkbox input:focus + label::before,
+.reserv__input-checkbox input + label:hover::before,
+.reserv__input-checkbox input + label:focus:before {
+  border: 3px solid $color-hover;
+  background-color: $color-hover;
+}
+
 .reserv__input-checkbox input:checked + label::after {
   content: "";
   position: absolute;
@@ -218,8 +233,4 @@
   width: 100%;
   border: none;
   cursor: pointer;
-
-  &:hover {
-    background-color: $color-hover;
-  }
 }

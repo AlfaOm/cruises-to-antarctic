@@ -1,45 +1,13 @@
 .banner {
   position: relative;
-  padding-top: 270px;
-  padding-right: 103px;
-  padding-left: 103px;
-  padding-bottom: 277px;
-  top: -73px;
-  margin-bottom: -73px;
-  background: $bg-banner url("../img/background/bg-banner-desk.jpg") no-repeat
-    center top;
-  background-size: cover;
-  z-index: -1;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/background/bg-banner-desk@2x.jpg");
-    background-size: cover;
-  }
+  padding: 198px 0 277px;
 
   @media (max-width: $to-desktop-width) {
-    padding: 268px 45px 276px;
-    top: -50px;
-    margin-bottom: -50px;
-    background: url("../img/background/bg-banner-tab.jpg") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/bg-banner-tab@2x.jpg");
-      background-size: cover;
-    }
+    padding: 219px 0 276px;
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 174px 15px 179px;
-    top: -62px;
-    margin-bottom: -61px;
-    background: url("../img/background/bg-banner-mob.jpg") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/bg-banner-mob@2x.jpg");
-      background-size: cover;
-    }
+    padding: 133px 0 159px;
   }
 }
 

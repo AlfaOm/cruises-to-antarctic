@@ -6,4 +6,9 @@
   color: $dark-text;
   background-color: $white-text;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: $color-hover;
+  }
 }

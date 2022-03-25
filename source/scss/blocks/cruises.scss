@@ -1,13 +1,13 @@
 .cruises {
-  padding: 110px 103px 115px;
+  padding: 110px 103px 114px;
   text-align: center;
 
   @media (max-width: $to-desktop-width) {
-    padding: 90px 45px 94px;
+    padding: 90px 45px 92px;
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 56px 15px 64px;
+    padding: 56px 15px 60px;
   }
 }
 
@@ -55,24 +55,9 @@
   padding: 0;
   margin: 0;
 
-  &:hover .cruises__card {
+  &:hover .cruises__card,
+  &:focus-within .cruises__card {
     display: block;
-  }
-
-  &:hover h3 {
-    top: 27px;
-    bottom: auto;
-    left: 25px;
-    z-index: 4;
-
-    @media (max-width: $to-desktop-width) {
-      left: 35px;
-    }
-
-    @media (max-width: $to-tablet-width) {
-      top: 29px;
-      left: 25px;
-    }
   }
 }
 
@@ -113,18 +98,19 @@
 
 .cruises__card {
   position: absolute;
-  padding-top: 71px;
+  padding-top: 30px;
   padding-right: 25px;
   padding-bottom: 35px;
   padding-left: 25px;
   top: 0;
   width: 260px;
-  min-height: 386px;
+  height: 386px;
   background-color: $dark-text;
   text-align: left;
 
   display: none;
   z-index: 3;
+  overflow-y: auto;
 
   @media (max-width: $to-desktop-width) {
     padding-left: 35px;
@@ -135,6 +121,16 @@
     padding-left: 25px;
     width: 270px;
   }
+}
+
+.cruises__card span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: $white-text;
+
+  display: block;
+  margin-bottom: 14px;
 }
 
 .cruises__card dt {
@@ -159,6 +155,10 @@
   padding-bottom: 10px;
   display: block;
   width: 210px;
+
+  &:focus {
+    background-color: $color-hover;
+  }
 
   @media (max-width: $to-desktop-width) {
     width: 239px;
