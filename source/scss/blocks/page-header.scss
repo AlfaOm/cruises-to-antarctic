@@ -25,15 +25,9 @@
 
   @media (max-width: $to-tablet-width) {
     padding-top: 20px;
-    padding-right: 15px;
+    padding-right: 0px;
     padding-bottom: 20px;
-    padding-left: 15px;
-    background: url("../img/background/bg-banner-mob.jpg") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/bg-banner-mob@2x.jpg");
-      background-size: cover;
-    }
+    padding-left: 0px;
+    background-image: none;
   }
 }

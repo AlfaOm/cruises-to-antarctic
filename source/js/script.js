@@ -17,11 +17,7 @@ const disableScroll = function () {
 }
 
 const enableScroll = function () {
-	let pagePosition = parseInt(document.body.dataset.position, 10);
-	document.body.style.top = 'auto';
 	document.body.classList.remove('disable-scroll');
-	window.scroll({ top: pagePosition, left: 0 });
-	document.body.removeAttribute('data-position');
 }
 
 function handlerToggleMenu(item) {
@@ -46,7 +42,7 @@ handlerToggleMenu(navToggle);
 
 // Закрытие мобильного меню при изменении ширины экрана
 function closedMenu() {
-  var widthViewport = window.innerWidth;
+  let widthViewport = window.innerWidth;
   if (widthViewport > 767) {
     navMain.classList.add("main-nav--closed");
     showNav.classList.remove("main-nav__wrapper--show");

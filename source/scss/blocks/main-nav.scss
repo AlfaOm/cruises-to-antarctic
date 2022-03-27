@@ -18,6 +18,7 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -172,7 +173,6 @@
       min-height: 568px;
       background-color: $white-text;
       z-index: 3;
-      overflow-y: auto;
     }
   }
 }

@@ -19,7 +19,7 @@
 <body>
 
   <header class="page-header">
-    <div class="container">
+    <div class="container container--mob">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__logo">
           <a>
@@ -48,11 +48,13 @@
           </div>
         </div>
       </nav>
-      <section class="banner">
+    </div>
+    <section class="banner">
+      <div class="container">
         <h1>Круизы в&nbsp;Антарктику</h1>
         <p>Волшебный мир айсбергов и пингвинов</p>
-      </section>
-    </div>
+      </div>
+    </section>
   </header>
 
   <main class="page-main">
@@ -447,8 +449,20 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.4545883032742!2d30.31903146792114!3d59.93872411150009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1629780325602!5m2!1sru!2sru"
             width="560" height="306" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
           <a target="_blank" href="https://yandex.ru/maps/-/CCQhQVUJwB">
-            <img src="img/map-desk.jpg" srcset="img/map-desk@2x.jpg 2x" width="560" height="306"
-              alt="Адрес офиса: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            <picture>
+              <!-- 1x: 290px; 2x: 580px -->
+              <source media="(max-width: 767px)" srcset="img/map-mob.webp 1x, img/map-mob@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)" srcset="img/map-mob.jpg 1x, img/map-mob@2x.jpg 2x">
+              <!-- 1x: 324px; 2x: 648px; -->
+              <source media="(max-width: 1023px)" srcset="img/map-tab.webp 1x, img/map-tab@2x.webp 2x"
+                type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/map-tab.jpg 1x, img/map-tab@2x.jpg 2x">
+              <!-- 1x: 560px; 2x: 1120px; -->
+              <source media="(min-width: 1024px)" srcset="img/map-desk.webp 1x, img/map-desk@2x.webp 2x"
+                type="image/webp">
+              <img src="img/map-desk.jpg" srcset="img/map-desk@2x.jpg 2x" width="560" height="306"
+                alt="Адрес офиса: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            </picture>
           </a>
         </div>
 
