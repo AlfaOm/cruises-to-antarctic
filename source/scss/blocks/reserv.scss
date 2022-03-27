@@ -79,7 +79,8 @@
 .reserv__text p {
   margin: 0;
   padding: 0;
-  width: 352px;
+  min-width: 352px;
+  max-width: 400px;
   font-size: 18px;
   line-height: 27px;
   color: $dark-text;
@@ -87,13 +88,19 @@
   @media (max-width: $to-desktop-width) {
     margin: 0 auto;
     margin-bottom: 52px;
+    max-width: 352px;
   }
 
   @media (max-width: $to-tablet-width) {
     margin-bottom: 35px;
-    width: 262px;
+    min-width: 262px;
+    max-width: 360px;
     font-size: 16px;
     line-height: 22px;
+  }
+
+  @media (max-width: 320px) {
+    width: 262px;
   }
 }
 
@@ -116,6 +123,7 @@
   @media (max-width: $to-tablet-width) {
     padding: 34px 30px 40px;
     width: 100%;
+    max-width: 403px;
   }
 }
 

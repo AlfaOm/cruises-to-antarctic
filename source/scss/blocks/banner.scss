@@ -7,7 +7,16 @@
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 133px 0 159px;
+    padding: 175px 15px 179px;
+    top: -42px;
+    margin-bottom: -61px;
+    background: url("../img/background/bg-banner-mob.jpg") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/bg-banner-mob@2x.jpg");
+      background-size: cover;
+    }
   }
 }
 
