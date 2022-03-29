@@ -5,20 +5,22 @@ const navToggle = document.querySelector(".main-nav__toggle");
 const showNav = document.querySelector(".main-nav__wrapper");
 const shadowNav = document.querySelector(".main-nav__shadow-back");
 const menuItem = document.querySelectorAll(".main-nav__wrapper a");
+const scrollMenu = document.querySelector(".main-nav__wrapper--show");
 
 navMain.classList.remove("main-nav--nojs");
 
 // Запрет скролла контента при открытом меню
 const disableScroll = function () {
-	let pagePosition = window.scrollY;
+	// let pagePosition = window.scrollY;
 	document.body.classList.add('disable-scroll');
-	document.body.dataset.position = pagePosition;
-	document.body.style.top = -pagePosition + 'px';
+	// document.body.dataset.position = pagePosition;
+	// document.body.style.top = -pagePosition + 'px';
 }
 
 const enableScroll = function () {
 	document.body.classList.remove('disable-scroll');
 }
+
 
 function handlerToggleMenu(item) {
   item.addEventListener("click", function () {
@@ -28,6 +30,7 @@ function handlerToggleMenu(item) {
       navMain.classList.add("main-nav--opened");
       shadowNav.classList.add("main-nav__shadow-back-on");
       disableScroll();
+      scrollMenu.style.overflowY = "scroll";
     } else {
       navMain.classList.add("main-nav--closed");
       showNav.classList.remove("main-nav__wrapper--show");
@@ -35,6 +38,7 @@ function handlerToggleMenu(item) {
       shadowNav.classList.remove("main-nav__shadow-back-on");
       document.body.classList.remove("disable-scroll");
       enableScroll();
+      scrollMenu.style.overflowY = "hidden";
     }
   });
 }
